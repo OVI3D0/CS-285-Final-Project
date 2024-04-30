@@ -46,7 +46,8 @@ Before running the project, make sure that you have the following:
          NF_0.jpg
          NF_1.jpg
          ...
-Download the data from:
+
+<br>Download the data from:<br>
 https://www.kaggle.com/datasets/mohnishsaiprasad/forest-fire-images
 
 7. Run the `train_model.py` script to train the fire detection model:
