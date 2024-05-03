@@ -95,3 +95,4 @@ tensorflow
 pillow
 opencv-python
 djitellopy
+numpy

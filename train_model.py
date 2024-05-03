@@ -2,6 +2,7 @@
 # https://www.kaggle.com/datasets/mohnishsaiprasad/forest-fire-images
 
 import os
+import joblib
 from sklearn.svm import SVC
 from keras.applications.vgg16 import VGG16
 from keras.preprocessing import image
@@ -70,6 +71,8 @@ y_test_valid = [y for x, y in zip(X_test_features, y_test) if x is not None]
 # Train SVM classifier
 svm_model = SVC(kernel='rbf', C=1.0, random_state=42)
 svm_model.fit(X_train_valid, y_train_valid)
+
+joblib.dump(svm_model, 'fire_detection_model.pkl')
 
 # Evaluate the model
 accuracy = svm_model.score(X_test_valid, y_test_valid)
